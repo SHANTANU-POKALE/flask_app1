@@ -7,13 +7,13 @@ import secrets
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = st.secrets["KEY"]
+app.config["SECRET_KEY"] = "KEY123"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
 app.config["MAIL_USERNAME"] = "festivalphotos004@gmail.com"
-app.config["MAIL_PASSWORD"] = st.secrets["PASSWORD"]
+app.config["MAIL_PASSWORD"] = "xegm jxoj imgo phsn"
 
 db = SQLAlchemy(app)
 
@@ -62,4 +62,4 @@ def index():
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
-        app.run(debug=false, host='0.0.0.0')
+        app.run(debug=False, host='0.0.0.0')
