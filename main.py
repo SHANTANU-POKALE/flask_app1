@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_mail import Mail, Message
 import os
+import secrets
 
 app = Flask(__name__)
 
@@ -61,4 +62,4 @@ def index():
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
-        app.run(debug=True, port=5001)
+        app.run(debug=false, host='0.0.0.0')
