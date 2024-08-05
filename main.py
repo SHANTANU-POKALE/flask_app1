@@ -6,13 +6,13 @@ import os
 
 app = Flask(__name__)
 
-app.config["SECRET_KEY"] = "myapplication123"
+app.config["SECRET_KEY"] = st.secrets["KEY"]
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
 app.config["MAIL_USERNAME"] = "festivalphotos004@gmail.com"
-app.config["MAIL_PASSWORD"] = "flasku"
+app.config["MAIL_PASSWORD"] = st.secrets["PASSWORD"]
 
 db = SQLAlchemy(app)
 
